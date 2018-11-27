@@ -25,7 +25,9 @@ $cajaNombre = limpiaPalabra($_POST['cajaNombre']);
  $numUsuarios = $resultadoQuery -> num_rows;
  if ($numUsuarios > 0){
      $r = $resultadoQuery -> fetch_array();
-     if (password_verify($cajaPassword, $r['contraseña'])){
+     //TODO : hay que encriptar las contraseñas en la BBDD
+     //if (password_verify($cajaPassword, $r['contraseña'])){
+     if ($cajaPassword == $r['contraseña']){
         //en la variable de sesión "nombreUsuario" guardo el nombre de usuario
         $_SESSION['id_usuario'] = $cajaNombre;
         //en la variable de sesión idUsuario guardo el id de usuario leido de la BBDD

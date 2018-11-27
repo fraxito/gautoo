@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 27-11-2018 a las 16:04:02
+-- Tiempo de generación: 27-11-2018 a las 19:42:07
 -- Versión del servidor: 10.1.29-MariaDB
 -- Versión de PHP: 7.2.0
 
@@ -35,9 +35,9 @@ CREATE TABLE `coches` (
   `CV` int(255) NOT NULL,
   `Cambio` varchar(256) COLLATE utf8_bin NOT NULL,
   `Combustible` varchar(256) COLLATE utf8_bin NOT NULL,
-  `KM` int(255) NOT NULL,
+  `KM` varchar(256) COLLATE utf8_bin NOT NULL,
   `Observaciones` varchar(256) COLLATE utf8_bin NOT NULL,
-  `Precio` int(255) NOT NULL,
+  `Precio` varchar(256) COLLATE utf8_bin NOT NULL,
   `foto_1` varchar(256) COLLATE utf8_bin NOT NULL,
   `foto_2` varchar(256) COLLATE utf8_bin NOT NULL,
   `foto_3` varchar(256) COLLATE utf8_bin NOT NULL,
