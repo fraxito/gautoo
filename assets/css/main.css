@@ -28,14 +28,15 @@ section, summary, time, mark, audio, video {
 
 #infobox3 p {
     line-height:58px;
-    /*font-size:12px;*/
     text-align:center;
 }
 #infobox3 p a {
     margin-right:5px;
     text-decoration: underline;
 }
-
+function oculto{
+    display: none;
+}
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
     display: block;}
