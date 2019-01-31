@@ -13,12 +13,12 @@
             <section id="header">
 
                 <!-- Logo -->
-                <h1><img class="logo" src="images/logo.png"><a href="index.html">GAUTO MOTOR</a></h1>
+                <h1><a href="index.html"><img class="logo" src="images/logo.png">GAUTO MOTOR</a></h1>
                 <!-- Nav -->
                 <nav id="nav">
                     <ul>
                         <li class="current"><a href="index.html">HOME</a></li>
-                        <li class="current"><a href="stock.html">VEHÍCULOS EN STOCK</a></li>
+                        <li class="current"><a href="stock.php">VEHÍCULOS EN STOCK</a></li>
                         <li class="current"><a href="postventa.html">POST VENTA</a></li>
                         <li class="current"><a href="tasacion.html">TASACIÓN</a></li>
                         <li class="current"><a href="servicios.html">SERVICIOS</a></li>
@@ -26,7 +26,7 @@
                         <!--<li class="current"><a href="blog.html">BLOG</a></li>-->
                     </ul>
                 </nav>
-                <!-- Banner -->
+                <!-- Banner  para el buscador-->
             <!--    <section id="banner_stock">
                     
                 </section>
@@ -41,7 +41,7 @@
                             <!-- Portfolio -->
                             <section>
                                 <header class="major">
-                                    <h2>Vehículos en stock</h2>
+                                    <h2>VEHÍCULOS EN STOCK</h2>
                                 </header>
                                 <div class="row">
                                     <div class="col-4 col-6-medium col-12-small">
