@@ -3,7 +3,7 @@
         <title>VEHÍCULOS EN STOCK</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        <link rel="stylesheet" href="assets/css/main.css" />
+        <link href="assets/css/main.css" rel="stylesheet" type="text/css"/>
         <link rel="icon" type="image/vnd.microsoft.icon" href="images/logo.png">
     </head>
     <body class="homepage is-preload">
@@ -43,6 +43,7 @@
                                 <header class="major">
                                     <h2>VEHÍCULOS EN STOCK</h2>
                                 </header>
+                                
                                 <div class="row">
                                     <div class="col-4 col-6-medium col-12-small">
                                         <section class="box">
