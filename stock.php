@@ -30,7 +30,7 @@
             <!--    <section id="banner_stock">
                     
                 </section>
-                            -->
+                -->
 
                 <!-- Main -->
                 <section id="main">
@@ -43,92 +43,33 @@
                                 <header class="major">
                                     <h2>VEHÍCULOS EN STOCK</h2>
                                 </header>
-                                
                                 <div class="row">
-                                    <div class="col-4 col-6-medium col-12-small">
+                                <?php
+                                include ('misFunciones.php');
+                                $mysqli = conectaBBDD();
+                                $resultadoQuery = $mysqli->query("SELECT * FROM coches");
+                                $coches_cajas = $resultadoQuery->num_rows;
+                                for($i = 0; $i < $coches_cajas; $i++){
+                                    $registro = $resultadoQuery -> fetch_array();
+                                    $imagen = $registro['foto_1'];
+                                    $marca =  $registro['Titulo_coche'];
+                                    $info_rapida = ' AÑO: '. $registro['Año'].'<br>PRECIO: '. $registro['Precio'].' <br>KM: '. $registro['KM'];
+                                       echo'<div class="col-4 col-6-medium col-12-small">
                                         <section class="box">
-                                            <a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
+                                            <a href="#" class="image featured"><img src="images/coches/'.$imagen.'" alt="" /></a>
                                             <header>
-                                                <h3>marca y modelo</h3>
+                                                <h3>'.$marca.'</h3>
                                             </header>
-                                            <p>Informacion rapida coche</p>
+                                            <p>'.$info_rapida.'</p>
                                             <footer>
                                                 <ul class="actions">
                                                     <li><a href="#" class="button alt">Ver más sobre el coche</a></li>
                                                 </ul>
                                             </footer>
                                         </section>
-                                    </div>
-                                    <div class="col-4 col-6-medium col-12-small">
-                                        <section class="box">
-                                            <a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
-                                            <header>
-                                                <h3>marca y modelo</h3>
-                                            </header>
-                                            <p>Informacion rapida coche</p>
-                                            <footer>
-                                                <ul class="actions">
-                                                    <li><a href="#" class="button alt">Ver más sobre el coche</a></li>
-                                                </ul>
-                                            </footer>
-                                        </section>
-                                    </div>
-                                    <div class="col-4 col-6-medium col-12-small">
-                                        <section class="box">
-                                            <a href="#" class="image featured"><img src="images/pic04.jpg" alt="" /></a>
-                                            <header>
-                                                <h3>marca y modelo</h3>
-                                            </header>
-                                            <p>Informacion rapida coche</p>
-                                            <footer>
-                                                <ul class="actions">
-                                                    <li><a href="#" class="button alt">Ver más sobre el coche</a></li>
-                                                </ul>
-                                            </footer>
-                                        </section>
-                                    </div>
-                                    <div class="col-4 col-6-medium col-12-small">
-                                        <section class="box">
-                                            <a href="#" class="image featured"><img src="images/pic05.jpg" alt="" /></a>
-                                            <header>
-                                                <h3>marca y modelo</h3>
-                                            </header>
-                                            <p>Informacion rapida coche</p>
-                                            <footer>
-                                                <ul class="actions">
-                                                    <li><a href="#" class="button alt">Ver más sobre el coche</a></li>
-                                                </ul>
-                                            </footer>
-                                        </section>
-                                    </div>
-                                    <div class="col-4 col-6-medium col-12-small">
-                                        <section class="box">
-                                            <a href="#" class="image featured"><img src="images/pic06.jpg" alt="" /></a>
-                                            <header>
-                                                <h3>marca y modelo</h3>
-                                            </header>
-                                            <p>Informacion rapida coche</p>
-                                            <footer>
-                                                <ul class="actions">
-                                                    <li><a href="#" class="button alt">Ver más sobre el coche</a></li>
-                                                </ul>
-                                            </footer>
-                                        </section>
-                                    </div>
-                                    <div class="col-4 col-6-medium col-12-small">
-                                        <section class="box">
-                                            <a href="#" class="image featured"><img src="images/pic07.jpg" alt="" /></a>
-                                            <header>
-                                                <h3>marca y modelo</h3>
-                                            </header>
-                                            <p>Informacion rapida coche</p>
-                                            <footer>
-                                                <ul class="actions">
-                                                    <li><a href="#" class="button alt">Ver más sobre el coche</a></li>
-                                                </ul>
-                                            </footer>
-                                        </section>
-                                    </div>
+                                    </div>';
+                                }
+                                ?>
                                 </div>
                             </section>
                         </div>
