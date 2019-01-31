@@ -47,7 +47,7 @@
                                 <?php
                                 include ('misFunciones.php');
                                 $mysqli = conectaBBDD();
-                                $resultadoQuery = $mysqli->query("SELECT * FROM coches");
+                                $resultadoQuery = $mysqli->query("SELECT * FROM coches ORDER BY Titulo_coche ASC");
                                 $coches_cajas = $resultadoQuery->num_rows;
                                 for($i = 0; $i < $coches_cajas; $i++){
                                     $registro = $resultadoQuery -> fetch_array();
