@@ -46,21 +46,21 @@
                                         $registro = $resultadoQuery->fetch_array();
                                         $imagen = $registro['foto_1'];
                                         $marca = $registro['Titulo_coche'];
-                                        $info_rapida = ' AÑO: ' . $registro['Año'] . '<br>PRECIO: ' . $registro['Precio'] . ' <br>KM: ' . $registro['KM'];
+                                        $info_rapida = ' AÑO: ' . $registro['Año'] . '<br>KM: ' . $registro['KM'] . ' <br>PRECIO: ' . $registro['Precio'];
                                         echo'<div class="col-4 col-6-medium col-12-small">
-                                        <section class="box">
-                                            <a href="#" class="image featured"><img src="images/coches/' . $imagen . '" alt="" /></a>
-                                            <header>
-                                                <h3>' . $marca . '</h3>
-                                            </header>
-                                            <p>' . $info_rapida . '</p>
-                                            <footer>
-                                                <ul class="actions">
-                                                    <li><a href="#" class="button alt">Ver más sobre el coche</a></li>
-                                                </ul>
-                                            </footer>
-                                        </section>
-                                    </div>';
+                                                <section class="box">
+                                                    <a href="#" class="image featured"><img src="images/coches/' . $imagen . '" alt="" /></a>
+                                                    <header>
+                                                        <h3>' . $marca . '</h3>
+                                                    </header>
+                                                    <p>' . $info_rapida . '</p>
+                                                    <footer>
+                                                        <ul class="actions">
+                                                            <li><a href="#" class="button alt">Ver más sobre el coche</a></li>
+                                                        </ul>
+                                                    </footer>
+                                                </section>
+                                            </div>';
                                     }
                                     ?>
                                 </div>
