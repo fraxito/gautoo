@@ -26,41 +26,34 @@
                         <!--<li class="current"><a href="blog.html">BLOG</a></li>-->
                     </ul>
                 </nav>
-                <!-- Banner  para el buscador-->
-            <!--    <section id="banner_stock">
-                    
-                </section>
-                -->
-
+                <!-- Banner  para el buscador--> <!--<section id="banner_stock"></section> -->
                 <!-- Main -->
                 <section id="main">
                     <div class="container">
                         <div class="row">
-
-
                             <!-- Portfolio -->
                             <section>
                                 <header class="major">
                                     <h2>VEHÍCULOS EN STOCK</h2>
                                 </header>
                                 <div class="row">
-                                <?php
-                                include ('misFunciones.php');
-                                $mysqli = conectaBBDD();
-                                $resultadoQuery = $mysqli->query("SELECT * FROM coches ORDER BY Titulo_coche ASC");
-                                $coches_cajas = $resultadoQuery->num_rows;
-                                for($i = 0; $i < $coches_cajas; $i++){
-                                    $registro = $resultadoQuery -> fetch_array();
-                                    $imagen = $registro['foto_1'];
-                                    $marca =  $registro['Titulo_coche'];
-                                    $info_rapida = ' AÑO: '. $registro['Año'].'<br>PRECIO: '. $registro['Precio'].' <br>KM: '. $registro['KM'];
-                                       echo'<div class="col-4 col-6-medium col-12-small">
+                                    <?php
+                                    include ('misFunciones.php');
+                                    $mysqli = conectaBBDD();
+                                    $resultadoQuery = $mysqli->query("SELECT * FROM coches ORDER BY Titulo_coche ASC");
+                                    $coches_cajas = $resultadoQuery->num_rows;
+                                    for ($i = 0; $i < $coches_cajas; $i++) {
+                                        $registro = $resultadoQuery->fetch_array();
+                                        $imagen = $registro['foto_1'];
+                                        $marca = $registro['Titulo_coche'];
+                                        $info_rapida = ' AÑO: ' . $registro['Año'] . '<br>PRECIO: ' . $registro['Precio'] . ' <br>KM: ' . $registro['KM'];
+                                        echo'<div class="col-4 col-6-medium col-12-small">
                                         <section class="box">
-                                            <a href="#" class="image featured"><img src="images/coches/'.$imagen.'" alt="" /></a>
+                                            <a href="#" class="image featured"><img src="images/coches/' . $imagen . '" alt="" /></a>
                                             <header>
-                                                <h3>'.$marca.'</h3>
+                                                <h3>' . $marca . '</h3>
                                             </header>
-                                            <p>'.$info_rapida.'</p>
+                                            <p>' . $info_rapida . '</p>
                                             <footer>
                                                 <ul class="actions">
                                                     <li><a href="#" class="button alt">Ver más sobre el coche</a></li>
@@ -68,8 +61,8 @@
                                             </footer>
                                         </section>
                                     </div>';
-                                }
-                                ?>
+                                    }
+                                    ?>
                                 </div>
                             </section>
                         </div>
