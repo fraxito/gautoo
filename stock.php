@@ -49,7 +49,7 @@
                                         $info_rapida = ' AÑO: ' . $registro['Año'] . '<br>KM: ' . $registro['KM'] . ' <br>PRECIO: ' . $registro['Precio'];
                                         echo'<div class="col-4 col-6-medium col-12-small">
                                                 <section class="box">
-                                                    <a href="#" class="image featured"><img src="images/coches/' . $imagen . '" alt="" /></a>
+                                                    <a class="image featured"><img src="images/coches/' . $imagen . '" alt="" /></a>
                                                     <header>
                                                         <h3>' . $marca . '</h3>
                                                     </header>
