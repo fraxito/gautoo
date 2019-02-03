@@ -35,16 +35,16 @@
                 <div class="container">
                     <div class="izquierdo">
                        <table>
-                        <tr><td>coche</td></tr>
-                        <tr><td>año</td></tr>
-                        <tr><td>motor</td></tr>
-                        <tr><td>cv</td></tr>
-                        <tr><td>cambio</td></tr>
-                        <tr><td>combustible</td></tr>
-                        <tr><td>km</td></tr>
-                        <tr><td>precio</td></tr>
-                        <tr><td>obser</td></tr>
-                    </table> 
+                            <tr><td>coche</td></tr>
+                            <tr><td>año</td></tr>
+                            <tr><td>motor</td></tr>
+                            <tr><td>cv</td></tr>
+                            <tr><td>cambio</td></tr>
+                            <tr><td>combustible</td></tr>
+                            <tr><td>km</td></tr>
+                            <tr><td>precio</td></tr>
+                            <tr><td>obser</td></tr>
+                        </table> 
                     </div>
                     <div class="derecho">
                         <div class="flexslider">
