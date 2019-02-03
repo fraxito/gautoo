@@ -78,17 +78,46 @@
 //                      $km = $registro['KM'];
 //                      $dinero = $registro['Precio'];
 //                      $observaciones = $registro['Observaciones'];
-//                      echo'<table>
-//                            <tr><td>' . $marca . '</td></tr>
-//                            <tr><td>Año: ' . $year . '</td></tr>
-//                            <tr><td>Motor: ' . $motor . '</td></tr>
-//                            <tr><td>CV: ' . $cv . '</td></tr>
-//                            <tr><td>Cambio: ' . $cambio . '</td></tr>
-//                            <tr><td>Combustible: ' . $combustible . '</td></tr>
-//                            <tr><td>Km: ' . $km . '</td></tr>
-//                            <tr><td>Precio: ' . $dinero . '</td></tr>
-//                            <tr><td>Observaciones: ' . $observaciones . '</td></tr>
-//                          </table>
+//                      $imagen1 = $registro['foto_1'];
+//                      $imagen2 = $registro['foto_2'];
+//                      $imagen3 = $registro['foto_3'];
+//                      $imagen4 = $registro['foto_4'];
+//                      $imagen5 = $registro['foto_5'];
+//                      $imagen6 = $registro['foto_6'];
+//                      $imagen7 = $registro['foto_7'];
+//                      $imagen8 = $registro['foto_8'];
+//                      $imagen9 = $registro['foto_9'];
+//                      $imagen10 = $registro['foto_10'];
+//                      $imagen11 = $registro['foto_11'];
+//                      $imagen12 = $registro['foto_12'];
+//                      echo'<div class="izquierdo">
+    //                          <table>
+    //                            <tr><td>' . $marca . '</td></tr>
+    //                            <tr><td>Año: ' . $year . '</td></tr>
+    //                            <tr><td>Motor: ' . $motor . '</td></tr>
+    //                            <tr><td>CV: ' . $cv . '</td></tr>
+    //                            <tr><td>Cambio: ' . $cambio . '</td></tr>
+    //                            <tr><td>Combustible: ' . $combustible . '</td></tr>
+    //                            <tr><td>Km: ' . $km . '</td></tr>
+    //                            <tr><td>Precio: ' . $dinero . '</td></tr>
+    //                            <tr><td>Observaciones: ' . $observaciones . '</td></tr>
+    //                          </table>
+    //                       </div>
+    //                     <div class="derecho">
+    //                        <div class="flexslider">
+    //                            <ul class="slides">
+    //                                <li>
+    //                                    <img src="images/coches/' . $imagen1 . '" />
+    //                                </li>
+    //                                <li>
+    //                                    <img src="images/coches/' . $imagen2 . '" />
+    //                                </li>
+    //                                <li>
+    //                                    <img src="images/coches/' . $imagen3 . '" />
+    //                                </li>
+    //                            </ul>
+    //                        </div>
+    //                      </div>
 //                      ';
 //                    }
                     ?>
