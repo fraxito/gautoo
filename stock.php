@@ -23,7 +23,7 @@
                         <li class="current"><a href="tasacion.html">TASACIÓN</a></li>
                         <li class="current"><a href="servicios.html">SERVICIOS</a></li>
                         <li class="current"><a href="contacto.html">CONTACTO</a></li>
-                        <!--<li class="current"><a href="blog.html">BLOG</a></li>-->
+                        <li class="current"><a href="mas_info.php">mas</a></li>
                     </ul>
                 </nav>
                 <!-- Banner  para el buscador--> <!--<section id="banner_stock"></section> -->
@@ -56,7 +56,7 @@
                                                     <p>' . $info_rapida . '</p>
                                                     <footer>
                                                         <ul class="actions">
-                                                            <li><a href="#" class="button alt">Ver más sobre el coche</a></li>
+                                                            <li><a href="mas_info.php" class="button alt">Ver más sobre el coche</a></li>
                                                         </ul>
                                                     </footer>
                                                 </section>
