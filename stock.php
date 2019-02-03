@@ -56,7 +56,7 @@
                                                     <p>' . $info_rapida . '</p>
                                                     <footer>
                                                         <ul class="actions">
-                                                            <li><a href="mas_info.php" class="button alt">Ver más sobre el coche</a></li>
+                                                            <li><a  onclick="" class="button alt">Ver más sobre el coche</a></li>
                                                         </ul>
                                                     </footer>
                                                 </section>
@@ -90,6 +90,5 @@
         <script src="assets/js/breakpoints.min.js"></script>
         <script src="assets/js/util.js"></script>
         <script src="assets/js/main.js"></script>
-
     </body>
 </html>

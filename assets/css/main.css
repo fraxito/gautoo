@@ -25,6 +25,15 @@ section, summary, time, mark, audio, video {
     /*float: left;*/
     margin-right: 40;
 }
+.izquierdo{
+    float: left;
+}
+.derecho{
+    float: right;
+    margin-right: 10%;
+    width: 40%;
+    height: 30%;
+}
 
 #infobox3 p {
     line-height:58px;

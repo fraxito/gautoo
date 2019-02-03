@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <link href="assets/css/main.css" rel="stylesheet" type="text/css"/>
         <link rel="icon" type="image/vnd.microsoft.icon" href="images/logo.png">
+        <link href="assets/css/flexslider.css" rel="stylesheet" type="text/css"/>
     </head>
     <body class="left-sidebar is-preload">
         <div id="page-wrapper">
@@ -32,8 +33,8 @@
             <!-- Main -->
             <section id="main">
                 <div class="container">
-<!--
-                    <table>
+                    <div class="izquierdo">
+                       <table>
                         <tr><td>coche</td></tr>
                         <tr><td>año</td></tr>
                         <tr><td>motor</td></tr>
@@ -43,38 +44,53 @@
                         <tr><td>km</td></tr>
                         <tr><td>precio</td></tr>
                         <tr><td>obser</td></tr>
-                    </table>-->
-
-                    <?php
-                    include ('misFunciones.php');
-                    $mysqli = conectaBBDD();
-                    $resultado = $mysqli->query("SELECT Titulo_coche,Año,Motor,CV,Cambio,Combustible,KM,Precio,Observaciones FROM coches ORDER BY Titulo_coche ASC");
-                    $info = $resultado->num_rows;
-                    for ($i = 0; $i < $info; $i++) {
-                      $registro = $resultado->fetch_array();
-                      $marca = $registro['Titulo_coche'];
-                      $year = $registro['Año'];
-                      $motor = $registro['Motor'];
-                      $cv = $registro['CV'];
-                      $cambio = $registro['Cambio'];
-                      $combustible = $registro['Combustible'];
-                      $km = $registro['KM'];
-                      $dinero = $registro['Precio'];
-                      $observaciones = $registro['Observaciones'];
-                      echo'<table>
-                            <tr><td>' . $marca . '</td></tr>
-                            <tr><td>Año: ' . $year . '</td></tr>
-                            <tr><td>Motor: ' . $motor . '</td></tr>
-                            <tr><td>CV: ' . $cv . '</td></tr>
-                            <tr><td>Cambio: ' . $cambio . '</td></tr>
-                            <tr><td>Combustible: ' . $combustible . '</td></tr>
-                            <tr><td>Km: ' . $km . '</td></tr>
-                            <tr><td>Precio: ' . $dinero . '</td></tr>
-                            <tr><td>Observaciones: ' . $observaciones . '</td></tr>
-                          </table>
-                      ';
-                    }
+                    </table> 
+                    </div>
+                    <div class="derecho">
+                        <div class="flexslider">
+                            <ul class="slides">
+                            <li>
+                                <img src="images/coches/120 R 1.jpg" />
+                            </li>
+                            <li>
+                                <img src="images/coches/120 R 2.jpg" />
+                            </li>
+                            <li>
+                                <img src="images/coches/120 R 3.jpg" />
+                            </li>
+                        </ul>
+                    </div>
+                    </div>
                    
+                    <?php
+//                    include ('misFunciones.php');
+//                    $mysqli = conectaBBDD();
+//                    $resultado = $mysqli->query("SELECT Titulo_coche,Año,Motor,CV,Cambio,Combustible,KM,Precio,Observaciones FROM coches ORDER BY Titulo_coche ASC");
+//                    $info = $resultado->num_rows;
+//                    for ($i = 0; $i < $info; $i++) {
+//                      $registro = $resultado->fetch_array();
+//                      $marca = $registro['Titulo_coche'];
+//                      $year = $registro['Año'];
+//                      $motor = $registro['Motor'];
+//                      $cv = $registro['CV'];
+//                      $cambio = $registro['Cambio'];
+//                      $combustible = $registro['Combustible'];
+//                      $km = $registro['KM'];
+//                      $dinero = $registro['Precio'];
+//                      $observaciones = $registro['Observaciones'];
+//                      echo'<table>
+//                            <tr><td>' . $marca . '</td></tr>
+//                            <tr><td>Año: ' . $year . '</td></tr>
+//                            <tr><td>Motor: ' . $motor . '</td></tr>
+//                            <tr><td>CV: ' . $cv . '</td></tr>
+//                            <tr><td>Cambio: ' . $cambio . '</td></tr>
+//                            <tr><td>Combustible: ' . $combustible . '</td></tr>
+//                            <tr><td>Km: ' . $km . '</td></tr>
+//                            <tr><td>Precio: ' . $dinero . '</td></tr>
+//                            <tr><td>Observaciones: ' . $observaciones . '</td></tr>
+//                          </table>
+//                      ';
+//                    }
                     ?>
 
 
@@ -101,6 +117,15 @@
         <script src="assets/js/breakpoints.min.js"></script>
         <script src="assets/js/util.js"></script>
         <script src="assets/js/main.js"></script>
-
+        <script src="assets/js/jquery.js" type="text/javascript"></script>
+        <script src="assets/js/jquery.flexslider.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            $(window).load(function () {
+                $('.flexslider').flexslider({
+                    animation: "slide",
+                    slideshowSpeed: 1500
+                });
+            });
+        </script>
     </body>
 </html>
