@@ -91,38 +91,36 @@
 //                      $imagen11 = $registro['foto_11'];
 //                      $imagen12 = $registro['foto_12'];
 //                      echo'<div class="izquierdo">
-    //                          <table>
-    //                            <tr><td>' . $marca . '</td></tr>
-    //                            <tr><td>Año: ' . $year . '</td></tr>
-    //                            <tr><td>Motor: ' . $motor . '</td></tr>
-    //                            <tr><td>CV: ' . $cv . '</td></tr>
-    //                            <tr><td>Cambio: ' . $cambio . '</td></tr>
-    //                            <tr><td>Combustible: ' . $combustible . '</td></tr>
-    //                            <tr><td>Km: ' . $km . '</td></tr>
-    //                            <tr><td>Precio: ' . $dinero . '</td></tr>
-    //                            <tr><td>Observaciones: ' . $observaciones . '</td></tr>
-    //                          </table>
-    //                       </div>
-    //                     <div class="derecho">
-    //                        <div class="flexslider">
-    //                            <ul class="slides">
-    //                                <li>
-    //                                    <img src="images/coches/' . $imagen1 . '" />
-    //                                </li>
-    //                                <li>
-    //                                    <img src="images/coches/' . $imagen2 . '" />
-    //                                </li>
-    //                                <li>
-    //                                    <img src="images/coches/' . $imagen3 . '" />
-    //                                </li>
-    //                            </ul>
-    //                        </div>
-    //                      </div>
+//                              <table>
+//                                <tr><td>' . $marca . '</td></tr>
+//                                <tr><td>Año: ' . $year . '</td></tr>
+//                                <tr><td>Motor: ' . $motor . '</td></tr>
+//                                <tr><td>CV: ' . $cv . '</td></tr>
+//                                <tr><td>Cambio: ' . $cambio . '</td></tr>
+//                                <tr><td>Combustible: ' . $combustible . '</td></tr>
+//                                <tr><td>Km: ' . $km . '</td></tr>
+//                                <tr><td>Precio: ' . $dinero . '</td></tr>
+//                                <tr><td>Observaciones: ' . $observaciones . '</td></tr>
+//                              </table>
+//                           </div>
+//                           <!--                         <div class="derecho">
+//                            <div class="flexslider">
+//                                <ul class="slides">
+//                                    <li>
+//                                        <img src="images/coches/' . $imagen1 . '" />
+//                                    </li>
+//                                    <li>
+//                                        <img src="images/coches/' . $imagen2 . '" />
+//                                    </li>
+//                                    <li>
+//                                        <img src="images/coches/' . $imagen3 . '" />
+//                                    </li>
+//                                </ul>
+//                            </div>
+//                          </div>-->
 //                      ';
 //                    }
                     ?>
-
-
 
                     <!-- Intro -->
                     <section id="intro" class="container">
