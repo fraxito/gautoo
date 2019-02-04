@@ -43,7 +43,7 @@
                             <tr><td>combustible</td></tr>
                             <tr><td>km</td></tr>
                             <tr><td>precio</td></tr>
-                            <tr><td>obser</td></tr>
+                            <tr><td>observaciones</td></tr>
                         </table> 
                     </div>
                     <div class="derecho">
