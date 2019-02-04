@@ -53,7 +53,7 @@
                                                     <header>
                                                         <h3><?php echo $marca ?></h3>
                                                     </header>
-                                                    <p>' . $info_rapida . '</p>
+                                                    <p><?php echo $info_rapida ?></p>
                                                     <footer>
                                                         <ul class="actions">
                                                             <li><a  onclick="" class="button alt">Ver más sobre el coche</a></li>
