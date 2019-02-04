@@ -47,11 +47,11 @@
                                         $imagen = $registro['foto_1'];
                                         $marca = $registro['Titulo_coche'];
                                         $info_rapida = '<strong> AÑO: ' . $registro['Año'] . '<br><strong>KM: ' . $registro['KM'] . ' <br><strong>PRECIO: ' . $registro['Precio'];
-                                        echo'<div class="col-4 col-6-medium col-12-small">
+                                        ?><div class="col-4 col-6-medium col-12-small">
                                                 <section class="box">
-                                                    <a class="image featured"><img src="images/coches/' . $imagen . '" alt="" /></a>
+                                                    <a class="image featured"><img src="images/coches/<?php echo $imagen ?>" alt="" /></a>
                                                     <header>
-                                                        <h3>' . $marca . '</h3>
+                                                        <h3><?php echo $marca ?></h3>
                                                     </header>
                                                     <p>' . $info_rapida . '</p>
                                                     <footer>
@@ -60,7 +60,8 @@
                                                         </ul>
                                                     </footer>
                                                 </section>
-                                            </div>';
+                                            </div>
+                                    <?php    
                                     }
                                     ?>
                                 </div>
