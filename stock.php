@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <link href="assets/css/main.css" rel="stylesheet" type="text/css"/>
         <link rel="icon" type="image/vnd.microsoft.icon" href="images/logo.png">
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
     </head>
     <body class="homepage is-preload">
         <div id="page-wrapper">
@@ -45,18 +46,21 @@
                                     for ($i = 0; $i < $coches_cajas; $i++) {
                                         $registro = $resultadoQuery->fetch_array();
                                         $imagen = $registro['foto_1'];
-                                        $marca = $registro['Titulo_coche'];
-                                        $info_rapida = '<strong> AÑO: ' . $registro['Año'] . '<br><strong>KM: ' . $registro['KM'] . ' <br><strong>PRECIO: ' . $registro['Precio'];
+                                        $marca =  trim(preg_replace('/\s\s+/', ' ', $registro['Titulo_coche']));  //esto es para limpiar de retornos de línea lo que tienes en la BBDD
+                                        $info_rapida = '<strong> AÑO: ' . $registro['Año'] . '</strong> <br><strong>KM: ' . $registro['KM'] . '</strong>  <br><strong>PRECIO: ' . $registro['Precio'].'</strong> ';
+                                       
                                         ?><div class="col-4 col-6-medium col-12-small">
                                                 <section class="box">
                                                     <a class="image featured"><img src="images/coches/<?php echo $imagen ?>" alt="" /></a>
                                                     <header>
                                                         <h3><?php echo $marca ?></h3>
                                                     </header>
-                                                    <p>'.$info_rapida.'</p>
+                                                    <p><?php echo $info_rapida ?></p>
                                                     <footer>
                                                         <ul class="actions">
-                                                            <li><a  onclick="" class="button alt">Ver más sobre el coche</a></li>
+                                                            <li><a  onclick="verMas('<?php echo $imagen ?>',
+                                                                                    '<?php echo $marca ?>'
+                                                                        );" class="button alt">Ver más sobre el coche</a></li>
                                                         </ul>
                                                     </footer>
                                                 </section>
@@ -86,10 +90,52 @@
 
         <!-- Scripts -->
         <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+        
         <script src="assets/js/jquery.dropotron.min.js"></script>
         <script src="assets/js/browser.min.js"></script>
         <script src="assets/js/breakpoints.min.js"></script>
         <script src="assets/js/util.js"></script>
         <script src="assets/js/main.js"></script>
+        
+        <script>
+        
+        function verMas(_imagen, _marca){
+            $('#imagenCoche').attr("src","images/coches/"+_imagen);
+            $('#marca').text(_marca);
+            $('#modalCoches').modal('show');
+        }
+        
+        </script>
+        
+        
+        <!-- MODAL PARA MOSTRAR LA FICHA DEL COCHE -->
+        
+ <div id="modalCoches" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-lg " style="width: 90%;">
+    <div class="modal-content">
+      <div class="modal-header">
+          <h4 class="modal-title">Ficha del vehículo</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        
+      </div>
+      <div class="modal-body">
+        <div id="infoDelCoche" > 
+            <a class="image featured"><img id="imagenCoche" alt="" /></a>
+            <table class="table table-striped table-bordered" >
+                <tr><td>Marca</td><td id="marca"></td></tr>
+                <tr><td>Modelo</td><td id="modelo"></td></tr>
+            </table>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal" >Salir</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+ 
+
     </body>
+    
 </html>
